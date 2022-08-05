@@ -60,7 +60,9 @@ dependencies {
 
     implementation("org.springframework.plugin:spring-plugin-core:${springPluginCoreVersion}")
     implementation("org.springdoc:springdoc-openapi-ui:${springdocVersion}")
-    implementation("org.springdoc:springdoc-openapi-groovy:${springdocVersion}")
+    implementation("org.springdoc:springdoc-openapi-groovy:${springdocVersion}") {
+        exclude group: 'org.codehaus.groovy', module: 'groovy'
+    }
 
     implementation("org.apache.groovy:groovy:${groovyVersion}")
     implementation("org.apache.groovy:groovy-json:${groovyVersion}")
