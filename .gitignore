@@ -1,0 +1,17 @@
+.project
+.classpath
+.springBeans
+.settings/
+/bin/
+.metadata/
+.recommenders/
+
+.gradle
+build
+out
+
+### IntelliJ IDEA ###
+/.idea/
+*.iws
+*.iml
+*.ipr

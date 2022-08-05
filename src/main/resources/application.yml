@@ -1,0 +1,38 @@
+logging.level:
+  com.benthum: INFO
+  root: ERROR
+
+springdoc.swagger-ui.path: /swagger-ui.html
+
+---
+server:
+  servlet.context-path: /swagger-service
+  port: 8080
+  ssl:
+    enabled: false
+    key-store:
+    key-store-password:
+    protocol: TLS
+
+spring:
+  application.name: swagger-service
+
+management:
+  metrics:
+    distribution:
+      percentiles[http.server.requests]: 0.95, 0.99
+      percentiles-histogram[http.server.requests]: true
+      slo[http.server.requests]: 250ms, 500ms
+    enable:
+      http: false
+      lettuce: false
+  endpoints:
+    web:
+      exposure:
+        include: health, metrics, info, *
+  endpoint:
+    prometheus:
+      enabled: true
+    health:
+      show-components: always
+      show-details: always
