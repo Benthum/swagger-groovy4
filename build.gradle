@@ -1,8 +1,8 @@
 buildscript {
     ext {
         springBootVersion = '2.7.2'
-        spockVersion = '2.1-groovy-3.0'
-        groovyVersion = '3.0.12'
+        spockVersion = '2.2-M3-groovy-4.0'
+        groovyVersion = '4.0.4'
         springdocVersion = '1.6.9'
         springPluginCoreVersion = '2.0.0.RELEASE'
         springSecurityVersion = '5.7.2'
@@ -62,8 +62,8 @@ dependencies {
     implementation("org.springdoc:springdoc-openapi-ui:${springdocVersion}")
     implementation("org.springdoc:springdoc-openapi-groovy:${springdocVersion}")
 
-    implementation("org.codehaus.groovy:groovy:${groovyVersion}")
-    implementation("org.codehaus.groovy:groovy-json:${groovyVersion}")
+    implementation("org.apache.groovy:groovy:${groovyVersion}")
+    implementation("org.apache.groovy:groovy-json:${groovyVersion}")
 
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat:${springBootVersion}")
 
